@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "1dd66125-abe7-4a4f-82a3-35a43c35aa7c",
+		"name": "Messagio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24013198"
+	},
+	"item": [
+		{
+			"name": "http://62.109.20.78:8081/auth",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"user@user.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://62.109.20.78:8081/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://62.109.20.78:8081/api/single",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"some text\",\n    \"to\": \"email@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://62.109.20.78:8081/api/single",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"single"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://62.109.20.78:8081/api/batch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    },\n    {\n        \"text\": \"some text\",\n        \"to\": \"email@example.com\"\n    },\n    {\n        \"text\": \"some text 2\",\n        \"to\": \"email2@example.com\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://62.109.20.78:8081/api/batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://62.109.20.78:8081/api/details/_LC-vkQ1QJimXBW5AL1xw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://62.109.20.78:8081/api/details/_LC-vkQ1QJimXBW5AL1xw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"details",
+						"_LC-vkQ1QJimXBW5AL1xw"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

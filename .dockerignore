@@ -1,0 +1,9 @@
+.vscode/
+.idea/
+vendor/
+db-data/
+docs/
+*.env
+*.png
+*.json
+*.md
